@@ -1,0 +1,17 @@
+geoip({
+  country: "The Netherlands",
+  area_code: "0",
+  organization_name: "Global Connectivity Solutions Llp",
+  country_code: "NL",
+  country_code3: "NLD",
+  continent_code: "EU",
+  asn: 215540,
+  region: "North Holland",
+  latitude: "52.3759",
+  longitude: "4.8975",
+  accuracy: 20,
+  timezone: "Europe\/Amsterdam",
+  city: "Amsterdam",
+  ip: "62.133.61.131",
+  organization: "AS215540 Global Connectivity Solutions Llp",
+});

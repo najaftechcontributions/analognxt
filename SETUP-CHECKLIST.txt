@@ -1,0 +1,371 @@
+================================================================================
+ANALOGNXT THEME - SETUP CHECKLIST
+================================================================================
+
+Use this checklist to ensure everything is properly set up.
+Check off each item as you complete it.
+
+================================================================================
+PRE-INSTALLATION
+================================================================================
+
+[ ] WordPress 5.8+ installed and running
+[ ] PHP 7.4+ available on server
+[ ] Advanced Custom Fields (ACF) Pro license available
+[ ] Theme files downloaded and ready
+[ ] Admin access to WordPress dashboard
+
+================================================================================
+INSTALLATION (15 minutes)
+================================================================================
+
+STEP 1: Install ACF Pro
+[ ] Download ACF Pro plugin
+[ ] Upload to WordPress (Plugins → Add New → Upload)
+[ ] Activate ACF Pro
+[ ] Verify activation (check Plugins list)
+
+STEP 2: Install Theme
+[ ] Upload theme to /wp-content/themes/analognxt/
+[ ] Or upload via Appearance → Themes → Add New → Upload
+[ ] Activate the AnalogNXT theme
+[ ] Confirm activation successful
+
+STEP 3: Verify Setup
+[ ] Visit admin dashboard
+[ ] Look for "AnalogNXT Blocks" notice
+[ ] Check that notice shows demo page link
+[ ] Confirm no error messages appear
+
+================================================================================
+CREATING YOUR HOMEPAGE (10 minutes)
+================================================================================
+
+OPTION A: Demo Page (Recommended First Time)
+[ ] Click "Create Demo Homepage" in admin notice
+[ ] OR visit: yoursite.com/wp-admin/?create_demo_page=1
+[ ] Confirm redirected to page editor
+[ ] Verify all 9 blocks are present
+[ ] Check that demo content displays
+
+OPTION B: Custom Page from Scratch
+[ ] Go to Pages → Add New
+[ ] Enter page title (e.g., "Homepage")
+[ ] In right sidebar, find "Page Attributes"
+[ ] Select Template: "Homepage (Blocks)"
+[ ] Click + button to add blocks
+[ ] Add blocks from "AnalogNXT Blocks" category
+[ ] Configure each block
+
+================================================================================
+CUSTOMIZING CONTENT (30-60 minutes)
+================================================================================
+
+BLOCK 1: Hero Section
+[ ] Upload or enter background video URL
+[ ] Upload poster image (fallback)
+[ ] Edit hero title text
+[ ] Select featured project (optional)
+[ ] Add social media links
+[ ] Preview changes
+
+BLOCK 2: About Section
+[ ] Edit eyebrow text
+[ ] Update heading
+[ ] Write company description (WYSIWYG)
+[ ] Set button text and link
+[ ] Preview changes
+
+BLOCK 3: Stats Section
+[ ] Click "Add Stat" to add items
+[ ] Enter stat number (e.g., "150+")
+[ ] Enter stat label
+[ ] Add 3-4 stats total
+[ ] Preview changes
+
+BLOCK 4: Featured Clients
+[ ] Enter client names (comma or space separated)
+[ ] Or update with your actual client list
+[ ] Preview the scrolling animation
+
+BLOCK 5: Marquee Section
+[ ] Click "Add Item" to add marquee elements
+[ ] Choose Type: Text or Image
+[ ] Enter text OR upload image
+[ ] Add 4-8 items for best effect
+[ ] Upload scaling video (optional)
+[ ] Preview animation
+
+BLOCK 6: Scaling CTA
+[ ] Edit heading text
+[ ] Edit subheading text
+[ ] Preview scaling animation
+
+BLOCK 7: Services Section
+[ ] Update eyebrow text
+[ ] Update heading
+[ ] Set button text and link
+[ ] Click "Add Service" for each service
+    [ ] Enter service number (01, 02, etc.)
+    [ ] Enter service title
+    [ ] List service items (one per line)
+    [ ] Upload service image (1200x800px)
+[ ] Add 4-6 services total
+[ ] Preview sticky card effect
+
+BLOCK 8: Works/Portfolio
+[ ] Update eyebrow text
+[ ] Update heading
+[ ] Set button text and link
+[ ] Click "Add Work" for each project
+    [ ] Enter project title
+    [ ] Enter client name
+    [ ] Enter year
+    [ ] Enter category
+    [ ] Set project link URL
+    [ ] Upload featured image (1400x900px)
+[ ] Add 6-12 portfolio items
+[ ] Preview grid layout
+
+BLOCK 9: Final CTA
+[ ] Update heading text
+[ ] Upload 3D animation video (optional)
+[ ] Set button text
+[ ] Set button link (usually /contact)
+[ ] Preview animation
+
+FINAL PAGE SETUP
+[ ] Review entire page in editor
+[ ] Click "Preview" to see live version
+[ ] Check all animations work
+[ ] Verify all links are correct
+[ ] Click "Publish" when ready
+
+================================================================================
+SETTING AS HOMEPAGE (2 minutes)
+================================================================================
+
+[ ] Go to Settings → Reading
+[ ] Select "A static page" option
+[ ] Homepage dropdown: Select your page
+[ ] Posts page: Select or leave blank
+[ ] Click "Save Changes"
+[ ] Visit site homepage to verify
+
+================================================================================
+MEDIA OPTIMIZATION (Before launch)
+================================================================================
+
+IMAGES
+[ ] All images compressed (use TinyPNG or similar)
+[ ] Images converted to WebP or AVIF format
+[ ] Alt text added to all images
+[ ] Hero poster: 1920x1080px minimum
+[ ] Service images: 1200x800px minimum
+[ ] Portfolio images: 1400x900px minimum
+[ ] Marquee images: 800x800px minimum
+
+VIDEOS
+[ ] Videos compressed (under 10MB each)
+[ ] Format: MP4 (H.264) or WebM
+[ ] Resolution: 1920x1080 (Full HD)
+[ ] Length: 5-30 seconds for backgrounds
+[ ] Videos have fallback posters
+[ ] Test video playback on mobile
+
+================================================================================
+TESTING (Before launch)
+================================================================================
+
+DESKTOP TESTING
+[ ] Test in Chrome
+[ ] Test in Firefox
+[ ] Test in Safari
+[ ] Test in Edge
+[ ] All blocks display correctly
+[ ] All animations work
+[ ] All links work
+[ ] Videos autoplay properly
+[ ] Images load correctly
+
+MOBILE TESTING
+[ ] Test on iPhone (Safari)
+[ ] Test on Android (Chrome)
+[ ] Responsive layout works
+[ ] Touch interactions work
+[ ] Videos work on mobile
+[ ] All content readable
+[ ] No horizontal scrolling
+
+FUNCTIONALITY TESTING
+[ ] All buttons link correctly
+[ ] Social links open in new tab
+[ ] Portfolio links work
+[ ] CTA buttons go to correct pages
+[ ] Forms work (if any)
+[ ] Search works (if enabled)
+
+PERFORMANCE TESTING
+[ ] Page loads in under 3 seconds
+[ ] Images lazy load
+[ ] Videos load smoothly
+[ ] No console errors
+[ ] Lighthouse score 80+ (run test)
+
+================================================================================
+SEO & SETTINGS (Before launch)
+================================================================================
+
+[ ] Page title set properly
+[ ] Meta description added (use SEO plugin)
+[ ] Social media images set (Open Graph)
+[ ] XML sitemap generated
+[ ] Google Analytics installed
+[ ] Google Search Console connected
+[ ] Favicon uploaded
+[ ] Site title and tagline set
+[ ] Permalink structure set (Settings → Permalinks)
+
+================================================================================
+OPTIONAL ENHANCEMENTS
+================================================================================
+
+[ ] Install caching plugin (WP Rocket, W3 Total Cache)
+[ ] Install SEO plugin (Yoast, Rank Math)
+[ ] Install security plugin (Wordfence, Sucuri)
+[ ] Install backup plugin (UpdraftPlus, BackupBuddy)
+[ ] Setup email notifications
+[ ] Configure comment settings
+[ ] Create privacy policy page
+[ ] Create contact page
+[ ] Setup contact form (Contact Form 7, WPForms)
+[ ] Enable CDN for media (Cloudflare, BunnyCDN)
+
+================================================================================
+LAUNCH CHECKLIST
+================================================================================
+
+PRE-LAUNCH
+[ ] All content reviewed and approved
+[ ] All images optimized
+[ ] All videos working
+[ ] All links tested
+[ ] Mobile version tested
+[ ] Desktop version tested
+[ ] SEO settings configured
+[ ] Analytics installed
+[ ] Backups configured
+[ ] Security hardened
+
+LAUNCH DAY
+[ ] Final backup created
+[ ] All caches cleared
+[ ] Test one more time
+[ ] Remove "Coming Soon" page (if any)
+[ ] Publish homepage
+[ ] Submit to Google Search Console
+[ ] Share on social media
+[ ] Monitor for issues
+
+POST-LAUNCH
+[ ] Monitor analytics for traffic
+[ ] Check for broken links
+[ ] Monitor site speed
+[ ] Review user feedback
+[ ] Plan content updates
+[ ] Regular backups
+[ ] Security updates
+[ ] Performance optimization
+
+================================================================================
+MAINTENANCE (Ongoing)
+================================================================================
+
+WEEKLY
+[ ] Check for broken links
+[ ] Review analytics
+[ ] Check site speed
+[ ] Test contact forms
+[ ] Review comments (if enabled)
+
+MONTHLY
+[ ] Update WordPress core
+[ ] Update plugins (ACF Pro, etc.)
+[ ] Update theme (if updates available)
+[ ] Full site backup
+[ ] Security scan
+[ ] Performance review
+
+QUARTERLY
+[ ] Content audit
+[ ] Image optimization review
+[ ] SEO review
+[ ] User experience review
+[ ] Analytics deep dive
+[ ] Competitor analysis
+
+================================================================================
+TROUBLESHOOTING
+================================================================================
+
+If blocks don't appear:
+[ ] Confirm ACF Pro is active (Plugins → Installed Plugins)
+[ ] Check for JavaScript errors (browser console)
+[ ] Try different browser
+[ ] Clear all caches
+[ ] Deactivate other plugins temporarily
+
+If content doesn't show:
+[ ] Verify "Homepage (Blocks)" template selected
+[ ] Check that page is published (not draft)
+[ ] Confirm page is set as homepage (Settings → Reading)
+[ ] Clear browser cache
+[ ] Try incognito/private window
+
+If styling is broken:
+[ ] Clear WordPress cache
+[ ] Clear browser cache
+[ ] Check analogNXTTheme folder exists
+[ ] Verify CSS files are loading (browser developer tools)
+[ ] Check for theme conflicts
+
+For more help: See SETUP-GUIDE.md Troubleshooting section
+
+================================================================================
+DOCUMENTATION REFERENCE
+================================================================================
+
+Quick Setup: Read QUICK-START.md
+Detailed Guide: Read SETUP-GUIDE.md
+Technical Info: Read PROJECT-SUMMARY.md
+This Checklist: Keep for reference
+
+================================================================================
+CONGRATULATIONS!
+================================================================================
+
+Once all items are checked, your AnalogNXT site is ready to go! 🎉
+
+Share your site with the world and start getting amazing results.
+
+Need help? Refer to the documentation files included with the theme.
+
+================================================================================
+NOTES & CUSTOMIZATIONS
+================================================================================
+
+Use this space to note any custom changes or settings:
+
+_____________________________________________________________________________
+
+_____________________________________________________________________________
+
+_____________________________________________________________________________
+
+_____________________________________________________________________________
+
+_____________________________________________________________________________
+
+_____________________________________________________________________________
+
+================================================================================
