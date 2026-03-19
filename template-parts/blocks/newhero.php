@@ -652,18 +652,21 @@ display:none;
           0
         )
           .fromTo(images[index], { yPercent: 15 * dFactor }, { yPercent: 0 }, 0)
-          .fromTo(
-            splitHeadings[index].chars,
-            { autoAlpha: 0, yPercent: 150 * dFactor },
-            {
-              autoAlpha: 1,
-              yPercent: 0,
-              duration: 1,
-              ease: "power2",
-              stagger: { each: 0.02, from: "random" }
-            },
-            0.2
-          );
+        const chars = splitHeadings[index] && splitHeadings[index].chars;
+          if (chars && chars.length) {
+            tl.fromTo(
+              chars,
+              { autoAlpha: 0, yPercent: 150 * dFactor },
+              {
+                autoAlpha: 1,
+                yPercent: 0,
+                duration: 1,
+                ease: "power2",
+                stagger: { each: 0.02, from: "random" }
+              },
+              0.2
+            );
+          }
 
         currentIndex = index;
       }
@@ -714,7 +717,7 @@ display:none;
 
       // 🔁 Re-enable hero when scrolling back up
       new IntersectionObserver(([entry]) => {
-        if (entry.isIntersecting && obs && !obs.isEnabled) {
+        if (entry.isIntersecting && obs && obs.isEnabled === false) {
           enableHero();
         }
       }, { threshold: 0.6 }).observe(root);

@@ -31087,7 +31087,7 @@
         }));
     })(zv || (zv = {})),
     ((Nv = Fv || (Fv = {})).defaultSizes = {
-      mobile: [480, 480],
+      mobile: [300, 300],
       tablet: [768, 768],
       desktop: [1200, 1200],
       custom: [769, 1200],
@@ -88980,10 +88980,10 @@
                     z: 0,
                     scrollTrigger: {
                       trigger: e,
-                      pin: window.innerWidth >= 480 && e.parentNode,
-                      pinType: window.innerWidth >= 480 && "transform",
-                      start: window.innerWidth >= 480 ? "top 5%" : "top 95%",
-                      scrub: window.innerWidth >= 480,
+                      pin: window.innerWidth >= 300 && e.parentNode,
+                      pinType: window.innerWidth >= 300 && "transform",
+                      start: window.innerWidth >= 300 ? "top 5%" : "top 95%",
+                      scrub: window.innerWidth >= 300,
                     },
                     stagger: { each: 0.006, from: "random" },
                   },

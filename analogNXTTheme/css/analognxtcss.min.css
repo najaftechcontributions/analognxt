@@ -9313,14 +9313,7 @@ figure {
     margin-top: 3rem;
     margin-bottom: 3rem;
   }
-  .section_home_client.section_wrap {
-    min-height: auto;
-  }
-  .featured_client_component {
-    height: auto;
-    position: static;
-    top: auto;
-  }
+
   .btn-bubble-arrow__arrow {
     display: none;
   }

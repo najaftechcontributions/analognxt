@@ -134,12 +134,41 @@ function analognxt_global_assets() {
     wp_enqueue_script( 'analognxt-swiper', $theme_dir . '/js/swiper-bundle.min.js', array(), '8.4.7', true );
     wp_enqueue_script( 'analognxt-lottie', $theme_dir . '/js/lottie.min.js', array(), '5.0.0', true );
     wp_enqueue_script( 'analognxt-barba', $theme_dir . '/js/barba.umd.min.js', array(), '2.0.0', true );
-    wp_enqueue_script( 'analognxt-webflow', $theme_dir . '/js/webflow.b049d1f4.43e069df8c3fa506.js', array( 'jquery' ), '1.0.0', true );
-    wp_enqueue_script( 'analognxt-attributes', $theme_dir . '/js/attributes.js', array(), '1.0.0', true );
+    // attributes.js (Finsweet) loaded from CDN — local dist/chunk-*.js files are missing build artifacts
+    wp_enqueue_script( 'analognxt-attributes', 'https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/attributes.js', array(), '2', true );
     wp_enqueue_script( 'analognxt-geo', $theme_dir . '/js/geo.js', array(), '1.0.0', true );
     wp_enqueue_script( 'analognxt-main', $theme_dir . '/js/main.js', array( 'analognxt-gsap', 'analognxt-lenis', 'analognxt-barba' ), '1.0.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'analognxt_global_assets' );
+
+/**
+ * Load attributes.js as an ES module (it uses import statements).
+ * Also suppress GSAP null-target warnings that occur during Barba page transitions.
+ */
+add_filter( 'script_loader_tag', function( $tag, $handle ) {
+    if ( 'analognxt-attributes' === $handle ) {
+        return str_replace( ' src=', ' type="module" src=', $tag );
+    }
+    return $tag;
+}, 10, 2 );
+
+/**
+ * Add favicon link and GSAP null-target guard.
+ */
+add_action( 'wp_head', function() {
+    $favicon_url = get_template_directory_uri() . '/analogNXTTheme/images/68b8196a197a58eec4194167_favicon.jpg';
+    echo '<link rel="icon" type="image/jpeg" href="' . esc_url( $favicon_url ) . '">' . "\n";
+    echo '<link rel="shortcut icon" type="image/jpeg" href="' . esc_url( $favicon_url ) . '">' . "\n";
+    // Guard GSAP against null targets thrown by Barba page transitions
+    echo '<script>window.__gsapNullTargetSuppressed=true;document.addEventListener("DOMContentLoaded",function(){if(window.gsap){gsap.config({nullTargetWarn:false});}});</script>' . "\n";
+}, 1 );
+
+/**
+ * Define the geoip callback before geo.js executes.
+ */
+add_action( 'wp_head', function() {
+    echo '<script>window.geoip = window.geoip || function(data){ window.geoipData = data; };</script>' . "\n";
+} );
 /**
  * Enqueue GSAP and tsparticles scripts.
  */

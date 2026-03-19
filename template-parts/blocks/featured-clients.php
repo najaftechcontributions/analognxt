@@ -39,7 +39,6 @@ $clients_text = get_field( 'clients_text' ) ?: 'Ministry of Public Security Mini
     font-size: 42px;
     font-weight: 800;
     font-family: 'Montserrat', sans-serif;
-
 }
 .eyebrow_wrap{
     display: none;
@@ -51,3 +50,37 @@ $clients_text = get_field( 'clients_text' ) ?: 'Ministry of Public Security Mini
 }
 </style>
 
+<script>
+(function () {
+  function initFeaturedClientsAnim() {
+    if (!window.gsap || !window.ScrollTrigger) return;
+    gsap.registerPlugin(ScrollTrigger);
+
+    const section = document.querySelector('.featured-clients-section');
+    const clientText = document.querySelector('[data-home-client-title]');
+    if (!section || !clientText) return;
+
+    gsap.fromTo(
+      clientText,
+      { opacity: 0, y: 60 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: section,
+          start: 'top 85%',
+          toggleActions: 'play none none none'
+        }
+      }
+    );
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initFeaturedClientsAnim);
+  } else {
+    initFeaturedClientsAnim();
+  }
+})();
+</script>

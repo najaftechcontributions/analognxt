@@ -493,16 +493,18 @@
     const toggle = document.querySelector(".mobile-menu-toggle");
     const dropdown = document.querySelector(".mobile-dropdown");
 
-    toggle.addEventListener("click", () => {
-      dropdown.classList.toggle("active");
-    });
+    if (toggle && dropdown) {
+      toggle.addEventListener("click", () => {
+        dropdown.classList.toggle("active");
+      });
 
-    // Optional: close dropdown when clicking outside
-    document.addEventListener("click", (e) => {
-      if (!dropdown.contains(e.target) && !toggle.contains(e.target)) {
-        dropdown.classList.remove("active");
-      }
-    });
+      // Optional: close dropdown when clicking outside
+      document.addEventListener("click", (e) => {
+        if (!dropdown.contains(e.target) && !toggle.contains(e.target)) {
+          dropdown.classList.remove("active");
+        }
+      });
+    }
   });
   document.addEventListener("DOMContentLoaded", () => {
     const header = document.querySelector(".nav_wrap1");
