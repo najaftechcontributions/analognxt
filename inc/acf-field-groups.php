@@ -1058,6 +1058,14 @@ acf_add_local_field_group(array(
 			'preview_size' => 'medium',
 			'library' => 'all',
 		),
+		array(
+			'key' => 'field_marquee_video',
+			'label' => 'Scaling Video',
+			'name' => 'scaling_video',
+			'type' => 'file',
+			'return_format' => 'array',
+			'mime_types' => 'mp4,webm',
+		),
 	),
 	'location' => array(
 		array(

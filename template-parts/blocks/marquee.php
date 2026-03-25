@@ -173,6 +173,7 @@ $row2_items = array_slice( $marquee_items, $half );
                        loop
                        muted
                        playsinline
+                       webkit-playsinline
                        class="u-height-full u-zindex-1"></video>
                 <div class="scaling-video-overlay"></div>
             </div>
@@ -188,5 +189,10 @@ $row2_items = array_slice( $marquee_items, $half );
     }
     .marquee-section{
         height: auto !important;
+    }
+    @media (max-width: 768px) {
+        .scaling-element__small-box {
+            display: none !important;
+        }
     }
 </style>
