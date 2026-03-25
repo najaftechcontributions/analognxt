@@ -49,6 +49,22 @@ function analognxt_register_acf_blocks()
 			'jsx' => true,
 		),
 	));
+	// Mobile Text Scroll Block
+acf_register_block_type(array(
+	'name' => 'mobiletextscroll',
+	'title' => __('Mobile Text Scroll Section', 'analognxt'),
+	'description' => __('Custom Mobile Text Scroll block', 'analognxt'),
+	'render_template' => get_template_directory() . '/template-parts/blocks/mobiletextscroll.php',
+	'category' => 'analognxt-blocks',
+	'icon' => 'editor-ul',
+	'keywords' => array('mobiletextscroll', 'mobile', 'text', 'scroll'),
+	'mode' => 'edit',
+	'supports' => array(
+		'align' => false,
+		'mode' => true,
+		'jsx' => true,
+	),
+));
 	// FX Accordion Block
 acf_register_block_type(array(
 	'name' => 'fx-accordion',

@@ -50,7 +50,7 @@ $slide2_bg_image = get_field('slide2_bg_image'); // full background image for sl
         
         <!-- Background Video -->
         <video autoplay muted loop class="background-video" playsinline>
-  <source src="https://analognxt.com/wp-content/uploads/2026/03/8058346-hd_1920_1080_25fps.mp4" type="video/mp4">
+  <source src="https://grey-cobra-124389.hostingersite.com/wp-content/uploads/2026/03/8058346-hd_1920_1080_25fps.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 

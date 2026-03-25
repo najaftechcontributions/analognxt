@@ -34,19 +34,3 @@ $subheading = get_field( 'subheading' ) ?: 'EVERY DETAIL CRAFTED WITH PRECISION 
         </div>
     </div>
 </section>
-<style>
-	@media (max-width:767px){
-		.scaling-cta-section {
-    background-image: url('https://analognxt.com/wp-content/uploads/2026/01/Desktop-14-1-scaled.webp');
-    background-size: cover;        /* Make it cover the whole section */
-    background-position: center;   /* Center the image */
-    background-repeat: no-repeat;  /* Prevent tiling */
-    background-attachment: fixed;  /* Optional: parallax effect */
-    transition: transform 0.5s ease; /* Smooth hover effect */
-}
-
-.scaling-cta-section:hover {
-    transform: scale(1.05);        /* Slight zoom on hover */
-}
-	}
-</style>

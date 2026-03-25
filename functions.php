@@ -156,7 +156,7 @@ add_filter( 'script_loader_tag', function( $tag, $handle ) {
  * Add favicon link and GSAP null-target guard.
  */
 add_action( 'wp_head', function() {
-    $favicon_url = get_template_directory_uri() . '/analogNXTTheme/images/68b8196a197a58eec4194167_favicon.jpg';
+    $favicon_url = get_template_directory_uri() . '/wp-content/uploads/2026/02/AnalgNXT-Logo-Icon-Transparent-Black-BG-PNG.png';
     echo '<link rel="icon" type="image/jpeg" href="' . esc_url( $favicon_url ) . '">' . "\n";
     echo '<link rel="shortcut icon" type="image/jpeg" href="' . esc_url( $favicon_url ) . '">' . "\n";
     // Guard GSAP against null targets thrown by Barba page transitions

@@ -19,7 +19,10 @@ $bg_url = $bg_image ? $bg_image['url'] : '';
         width: 100%;
         max-width: 1440px;
 
-
+    @media (max-width: 768px) {
+		#scroll-down{
+			height:80vh !important;
+		}
     }
 
     @media (max-width: 1024px) {
