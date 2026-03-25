@@ -19,7 +19,7 @@
 /* Show only on mobile */
 @media (max-width: 768px) {
   .matrix-block {
-    display: block;
+    display: none;
   }
 }
 

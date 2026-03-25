@@ -48,9 +48,4 @@ $clients_text = get_field( 'clients_text' ) ?: 'Ministry of Public Security Mini
         font-size: 32px;
     }
 }
-@media (max-width: 767px) {
-  .featured-clients-section {
-    display: none;
-  }
-}
 </style>
