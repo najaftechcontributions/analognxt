@@ -153,13 +153,9 @@ add_filter( 'script_loader_tag', function( $tag, $handle ) {
 }, 10, 2 );
 
 /**
- * Add favicon link and GSAP null-target guard.
+ * GSAP null-target guard for Barba page transitions.
  */
 add_action( 'wp_head', function() {
-    $favicon_url = get_template_directory_uri() . '/wp-content/uploads/2026/02/AnalgNXT-Logo-Icon-Transparent-Black-BG-PNG.png';
-    echo '<link rel="icon" type="image/jpeg" href="' . esc_url( $favicon_url ) . '">' . "\n";
-    echo '<link rel="shortcut icon" type="image/jpeg" href="' . esc_url( $favicon_url ) . '">' . "\n";
-    // Guard GSAP against null targets thrown by Barba page transitions
     echo '<script>window.__gsapNullTargetSuppressed=true;document.addEventListener("DOMContentLoaded",function(){if(window.gsap){gsap.config({nullTargetWarn:false});}});</script>' . "\n";
 }, 1 );
 
@@ -265,3 +261,16 @@ require get_template_directory() . '/inc/blocks.php';
  * ACF Field Groups
  */
 require get_template_directory() . '/inc/acf-field-groups.php';
+add_action('template_redirect', function () {
+    if (isset($_GET['l'])) {
+        wp_redirect(home_url('/home/'), 301);
+        exit;
+    }
+});
+// Redirect any URL with ?l=NUMBER to /home page
+add_action('template_redirect', function() {
+    if ( isset($_GET['l']) ) { // catches any ?l= parameter
+        wp_redirect( home_url('/home'), 301 ); // permanent redirect to /home
+        exit;
+    }
+});
